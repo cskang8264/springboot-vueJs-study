@@ -11,8 +11,11 @@
   </style>
 </head>
 <body>
+  <!-- *v-cloak*
+  브라우저단에서 DOM렌더후 제어권을 vue 객체에 넘겨주게 되는데, 그 사이에 내추럴 마크업이 
+  나오는 것을 방지 -->
   <div id="app" v-cloak>  
-    <message-list :items="messages" @delete-each-message="deleteMessage"></message-list>
+    <message-list :items="messages" @delete="deleteMessage"></message-list>
     <form @submit.prevent="addMessage">
       <textarea v-model="newMessage" placeholder="Leave a message"></textarea>
       <div><button :disabled="addDisabled" type="submit">Add</button></div>
@@ -27,15 +30,18 @@
         messages: [],
         newMessage: ''
       },
+      // 이벤트 조건 모듈화
       computed: {        
         addDisabled () {
           return this.messages.length >= 10 || this.newMessage.length > 50
         }
-      },    
+      },
+      // 컴포넌트    
       components: {
         MessageList
       },
       methods: {
+        
         addMessage (event) {
           if (!this.newMessage) alert('데이터를 입력하세여!');
           let now = new Date()
