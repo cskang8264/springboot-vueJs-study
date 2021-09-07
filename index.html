@@ -43,7 +43,10 @@
       methods: {
         
         addMessage (event) {
-          if (!this.newMessage) alert('데이터를 입력하세여!');
+          if (!this.newMessage) {
+            alert('데이터를 입력하세여!');
+            return ;
+          }
           let now = new Date()
           this.messages.push({text: this.newMessage, createdAt: now, id: now.getTime()})
           this.newMessage = ''
