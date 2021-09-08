@@ -26,6 +26,7 @@
     import MessageList from './components/MessageList.js'
     import './directives/focus.directive.js'
     import './filters/datetime.filter.js'
+    import lifecycleLogger from './mixins/lifecycle-logger.mixin.js'
     
     let vm = new Vue({
       el: '#app',
@@ -57,7 +58,10 @@
         deleteMessage (message) {
           this.messages.splice(this.messages.indexOf(message), 1)
         }
-      }
+      },
+      name: 'MessageAppDaewon',
+      mixins: [lifecycleLogger],
+
     })
   </script>
 </body>
