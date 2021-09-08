@@ -3,7 +3,7 @@ import lifecycleLogger from '../mixins/lifecycle-logger.mixin.js'
 
 export default {
     name: 'MessageList',
-    mixins: [lifecycleLogger],
+    // mixins: [lifecycleLogger],
     template: 
       `<ul>
         <message-list-item v-for="item in items" :item="item"

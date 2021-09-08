@@ -26,7 +26,8 @@
     import MessageList from './components/MessageList.js'
     import './directives/focus.directive.js'
     import './filters/datetime.filter.js'
-    import lifecycleLogger from './mixins/lifecycle-logger.mixin.js'
+    // import lifecycleLogger from './mixins/lifecycle-logger.mixin.js'
+    import LifecycleLogger from "./plugins/lifecycle-logger.plugin.js";
     
     let vm = new Vue({
       el: '#app',
@@ -60,9 +61,12 @@
         }
       },
       name: 'MessageAppDaewon',
-      mixins: [lifecycleLogger],
+      // mixins: [lifecycleLogger],
 
     })
+
+    Vue.use(LifecycleLogger, {beforeMount: false, created: false});
+
   </script>
 </body>
 </html>

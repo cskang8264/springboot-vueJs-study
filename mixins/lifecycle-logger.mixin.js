@@ -13,3 +13,5 @@ export default {
         console.log(`${this.$options.name} destroyed`);
     }
 };
+
+
