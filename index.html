@@ -58,6 +58,13 @@
         },
         deleteMessage (message) {
           this.messages.splice(this.messages.indexOf(message), 1)
+        },
+        test () {
+          for ( var i = 0; i < 3; i++ ) {
+            setTimeout( function() {
+            alert( i );
+        }, 1000);
+        }
         }
       },
       name: 'MessageAppDaewon',

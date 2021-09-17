@@ -3,9 +3,12 @@
 .settings
 .project
 .sts4-cache
+*.json
 
 *.iml
 .classpath
+.idea
 
 /bin
-/target
+/Server/target
+

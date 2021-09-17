@@ -9,3 +9,15 @@
     - 필터
     - 믹스인
     - 플러그인
+    
+    
+- Spring Boot Remind(2주차)
+    - IOC, DI(필드주입, 세터주입, 생성자 주입)
+    - JAVA EE SERVLET 
+    - DISPATCHER SERVLET
+    - VIEW (MVC) , Thymeleaf 
+    - Filter (Chaning, Server Warming Up Example)
+        1. 스프링 프레임워크 5부터 WebFlux도입, 논블로킹 웹 프레임워크(나중에 알아보자)
+    
+    
+    
